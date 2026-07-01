@@ -2,28 +2,26 @@
 
 ## Project Summary
 
-Impressions is a lightweight evaluation harness for measuring the correctness and reliability of AI-generated code. The first version focuses on deterministic, reproducible signals: structured coding tasks, model-generated solutions, isolated execution, pytest-based grading, pass@k-style reliability metrics, and versioned run outputs.
+Impressions is an evaluation harness for measuring the correctness and reliability of AI-generated code. The first version focuses on deterministic, reproducible signals: structured coding tasks, model-generated solutions, isolated execution, pytest-based grading, pass@k-style reliability metrics, and versioned run outputs.
 
-Future versions may explore tracing, dashboards, LLM-as-judge scoring, or complex qualitative analysis.
+Future versions will explore tracing, dashboards, LLM-as-judge scoring and complex qualitative analysis.
 
 ## Background: A Study in Impressions
 
-AI systems produce output that is often fluid, creative and sometimes can be ambiguous.  It may be unsructured prose and not a format easily tested deterministically against unit test.  In short, like improvisation, there can be a different melody produced at each run
+AI systems are inherently non-deterministic. Their outputs often manifest as fluid, unstructured prose that resists traditional unit testing. Much like a jazz performance, an AI model may explore a unique melody every time it is invoked, making it difficult to capture performance with rigid, binary assessments.
 
-AI models don't just "compute"—they express. To truly understand their performance, we need a framework that accommodates both the cold precision of a unit test and the subjective nuance of human judgment.
-
-That's where evaluations come in and that's where impressions come in.
+AI models do not merely "compute"—they express. To truly measure their performance, we need a framework that reconciles the cold precision of deterministic testing with the subjective nuance of human judgment
 
 ### Why "Impressions"?
-This project is named **Impressions**—a nod to the jazz standard by John Coltrane. Just as a jazz composition provides a structure for improvisation, this harness provides a structure for evaluation. In jazz, a melody can be interpreted differently by every player, and each "impression" reveals something new about the theme.
+This project is named **Impressions**—a nod to the jazz standard by John Coltrane. Just as a jazz composition provides a structural framework for improvisation, this harness provides a structure for evaluation. In jazz, a theme is interpreted differently by every musician, and each "impression" reveals a unique dimension of the melody.
 
-Similarly, in this framework, an **Impression** is the atomic unit of assessment. It is a polymorphic construct that defines how we "grade" an AI's behavior. An *Impression* could be:
+In this framework, an **Impression** is the atomic unit of assessment—a polymorphic construct that defines how we measure AI behavior. An Impression serves as a unified interface for disparate grading methods::
 
 * **Deterministic:** A unit test or regex match for rigid code requirements.
 * **Model-Based:** An "LLM-as-a-judge" that analyzes tone, reasoning, or quality.
 * **Human-Centric:** An interface for expert-in-the-loop qualitative feedback.
 
-By abstracting these diverse grading methods into a unified "Impression" interface, this harness allows developers to build complex, layered evaluation pipelines. You aren't just running a test; you are gathering a collection of impressions to build a holistic understanding of your model’s capabilities.
+By abstracting diverse grading methodologies into a unified interface, Impressions allows developers to build layered evaluation pipelines. You are not merely running a test suite; you are gathering a collection of impressions to develop a holistic, multi-faceted understanding of your model’s capabilities.
 
 ## MVP Objective
 
